@@ -13,23 +13,22 @@ class MyProfile extends Component {
     return (
       <form>
         <h1>My Profile</h1>
-        <label>Name
-          <input type="text" placeholder="Your name" name="name" onChange={this.handleChange} />
-        </label>
-        <label>Gender
-          <select name="gender" onChange={this.handleChange}>
+        <label for="name">Name</label>
+        <input type="text" placeholder="Your name" name="name" id="name" onChange={this.handleChange} />
+        <label for="gender">Gender</label>
+        <select name="gender" id="gender" onChange={this.handleChange}>
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
-        </label>
-        <label>Description
-          <textarea placeholder="Description about yourself" name="description" onChange={this.handleChange} />
-        </label>
-        <label>I have read the terms of conduct
-          <input type="checkbox" name="agree" onChange={this.handleChange} />
-        </label>
+        <label for="description">Description</label>
+        <textarea placeholder="Description about yourself" name="description" id="description" onChange={this.handleChange} />
+        <div id="agree-line">
+          <input type="checkbox" name="agree" id="agree" onChange={this.handleChange} />
+          <label for="agree">I have read the terms of conduct</label>
+        </div>
         <button
           type="button"
+          className="btn btn-primary button-customize"
           disabled={!this.hasFillCompleted()}
           onClick={this.handleSubmit}>Submit</button>
       </form>

@@ -1,0 +1,80 @@
+.App {
+    background-color: lightgray;
+    border: 1px solid gray;
+    height: 560px;
+    width:400px;
+    margin: auto;
+}
+
+* {
+    box-sizing:border-box;
+}
+
+@Gray: rgba(0, 0, 0, 0.5);
+@base-padding: 10px;
+
+form {
+    margin: 30px 60px;
+}
+
+form h1 {
+    color: @Gray;
+    margin: 0;
+    font-size: 1.8em;
+    margin-bottom: 30px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0;
+    font-weight: 600;
+    color: @Gray;
+}
+
+form input, form select {
+    padding: @base-padding;
+    width: 100%;
+    border: none;
+}
+
+form textarea {
+    border: none;
+    padding: @base-padding;
+    width: 100%;
+    height: 8em;
+    font-family: inherit;
+    resize : none;
+}
+
+form textarea::-webkit-input-placeholder{
+    font-family: inherit;
+}
+
+#agree-line {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+#agree-line label {
+    display: inline;
+    font-size: 0.5em;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+#agree {
+    display: inline;
+    width: initial;
+    margin: 0;
+    padding: 0;
+    zoom: 2;
+}
+
+.button-customize {
+    display: block;
+    margin: 20px auto;
+    border-radius: 0;
+    width: 150px;
+    height: 40px;
+}
